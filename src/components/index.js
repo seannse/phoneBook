@@ -12,5 +12,5 @@ export { default as AddContactBtn } from './AddContactBtn/AddContactBtn';
 export { default as Modal } from './Modal/Modal';
 export { default as Backdrop } from './Backdrop/Backdrop';
 export { default as ModalCloseBtn } from './ModalCloseBtn/ModalCloseBtn';
-export { default as AlphabetBtn } from './AlphabetBtn/AlphabetBtn';
 export { default as AlphabetFilter } from './AlphabetFilter/AlphabetFilter';
+export { default as AlphabetBtn } from './AlphabetBtn/AlphabetBtn';

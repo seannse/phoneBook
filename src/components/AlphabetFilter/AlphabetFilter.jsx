@@ -1,10 +1,10 @@
-import style from './AlphabetFilter.module.css';
-import AlphabetBtn from '../alphabetBtn/AlphabetBtn';
-
 import { IoCloseCircleSharp } from 'react-icons/io5';
-
 import { useDispatch } from 'react-redux';
+
 import { setFilter } from '../../redux/filter/slice';
+import { AlphabetBtn } from '../../components';
+
+import style from './AlphabetFilter.module.css';
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
