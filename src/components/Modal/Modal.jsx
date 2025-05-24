@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { ModalCloseBtn } from '../../components';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
-import { ModalBackdrop } from '../../components';
+import { Backdrop } from '../../components';
 import { selectTheme } from '../../redux/selectors';
 
 import css from './Modal.module.css';
@@ -32,7 +32,7 @@ function Modal({ title, setModalOpen, isModalOpen, children }) {
   return (
     <>
       {isModalOpen && (
-        <ModalBackdrop modalClose={setModalOpen}>
+        <Backdrop modalClose={setModalOpen}>
           <div
             className={css.modal}
             style={
@@ -47,7 +47,7 @@ function Modal({ title, setModalOpen, isModalOpen, children }) {
             <h2 className={css.modal__title}>{title}</h2>
             {children}
           </div>
-        </ModalBackdrop>
+        </Backdrop>
       )}
     </>
   );

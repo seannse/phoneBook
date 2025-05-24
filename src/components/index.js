@@ -10,7 +10,7 @@ export { default as WithAuthRedirect } from './HOC/WithAuthRedirect';
 export { default as WithLogOutRedirect } from './HOC/WithLogOutRedirect';
 export { default as AddContactBtn } from './AddContactBtn/AddContactBtn';
 export { default as Modal } from './Modal/Modal';
-export { default as ModalBackdrop } from './ModalBackdrop/ModalBackdrop';
+export { default as Backdrop } from './Backdrop/Backdrop';
 export { default as ModalCloseBtn } from './ModalCloseBtn/ModalCloseBtn';
 export { default as AlphabetBtn } from './AlphabetBtn/AlphabetBtn';
 export { default as AlphabetFilter } from './AlphabetFilter/AlphabetFilter';

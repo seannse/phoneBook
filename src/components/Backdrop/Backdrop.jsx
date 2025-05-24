@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
-import css from './ModalBackdrop.module.css';
+import css from './Backdrop.module.css';
 
 function ModalBackdrop({ children, modalClose }) {
   const { isMobile } = useWindowSize();
