@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { ModalCloseBtn } from '..';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
-import { ModalBackdrop } from '..';
+import { ModalBackdrop } from '../../components';
 import { selectTheme } from '../../redux/selectors';
 
 import css from './Modal.module.css';
