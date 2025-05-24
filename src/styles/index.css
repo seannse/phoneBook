@@ -1,0 +1,128 @@
+/* ================= CSS VARIABLE ================= */
+
+:root {
+  --primary-color-light: #1b2939;
+  --primary-color-dark: #e8edf1;
+  --primary-color-accent: #807ef2;
+  --primary-background-color-light: #e8edf1;
+  --primary-background-color-dark: #1b2939;
+}
+
+/* ================= RESET ================= */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* html,
+body {
+  height: 100%;
+} */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* border: 1px solid transparent !important; */
+  /* -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; */
+  -webkit-text-fill-color: rgb(143, 153, 164);
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* ================= Additional ================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ================= Common styles ================= */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary-background-color-light);
+  color: var(--primary-color-light);
+  transition-property: background-color;
+  transition-duration: 500ms;
+}
+
+body.dark {
+  background-color: var(--primary-background-color-dark);
+  color: var(--primary-color-dark);
+}
+
+.section {
+  padding: 50px 0px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg-auth {
+  position: absolute;
+  bottom: 20px;
+  right: 200px;
+  width: 300px;
+  height: 300px;
+  rotate: 20%;
+  background-image: url(../images/book.png);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1rem;
+  gap: 32px;
+  margin: 0 auto;
+
+  min-width: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1032px) {
+  .container {
+    max-width: 1032px;
+  }
+}
+
+a.active {
+  border-bottom: 2px solid var(--primary-color-accent);
+}

@@ -1,0 +1,49 @@
+.wrapper {
+  align-self: flex-start;
+}
+
+.bg_home {
+  background-image: url(../../images/start.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 400px;
+  height: 400px;
+
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .bg_home {
+    display: none;
+  }
+}
+
+.title {
+  max-width: 484px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  max-width: 484px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.link:hover {
+  border-bottom: 2px solid var(--primary-color-accent);
+}

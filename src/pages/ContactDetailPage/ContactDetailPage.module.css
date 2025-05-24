@@ -1,0 +1,96 @@
+.contact_detail {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contact_detail {
+    max-width: 400px;
+    box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.name {
+  font-family: 'Podkova';
+  font-size: 30px;
+}
+
+.text {
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  text-align: center;
+}
+
+.btn_edit {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.btn {
+  padding: 10px;
+
+  background: linear-gradient(
+    80.23deg,
+    #e8652d -4.25%,
+    #e82dd2 28.23%,
+    #a650ff 69.35%,
+    #009dff 116.49%
+  );
+  border-radius: 16px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  color: #ffffff;
+
+  transition: 200ms ease-in;
+}
+
+.btn_back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    88.08deg,
+    #009dff 3.71%,
+    #a650ff 38.56%,
+    #e84980 68.28%,
+    #e8652d 91.86%
+  );
+  box-shadow: 0px 6px 12px rgba(172, 73, 245, 0.3);
+}
+.icons_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  width: 48px;
+  height: 48px;
+}

@@ -1,0 +1,90 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+
+  width: 100%;
+  min-width: 264px;
+  max-width: 420px;
+}
+
+.label {
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 10px;
+  width: 100%;
+  min-width: 264px;
+  max-width: 420px;
+  background: rgba(98, 138, 170, 0.15);
+  border-radius: 12px;
+
+  transition: 200ms ease-in;
+}
+
+.input::placeholder {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgb(143, 153, 164);
+}
+
+.input:-webkit-autofill:focus,
+.input:focus {
+  box-shadow: 0px 0px 1px 1px var(--primary-color-accent);
+}
+
+.input_error {
+  box-shadow: 0px 0px 1px 1px #eb505b;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+
+  width: 100%;
+
+  background: linear-gradient(
+    80.23deg,
+    #e8652d -4.25%,
+    #e82dd2 28.23%,
+    #a650ff 69.35%,
+    #009dff 116.49%
+  );
+  border-radius: 16px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  text-align: center;
+  color: #ffffff;
+
+  transition: 200ms ease-in;
+}
+
+.button:hover {
+  background: linear-gradient(
+    88.08deg,
+    #009dff 3.71%,
+    #a650ff 38.56%,
+    #e84980 68.28%,
+    #e8652d 91.86%
+  );
+  box-shadow: 0px 6px 12px rgba(172, 73, 245, 0.3);
+}
