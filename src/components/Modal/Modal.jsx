@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { ModalCloseBtn } from '..';
+import { ModalCloseBtn } from '../../components';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
 import { ModalBackdrop } from '../../components';
