@@ -15,7 +15,7 @@ import { Loader, ThemeSwitcher } from '../../components';
 import UserMenu from './UserMenu/UserMenu';
 import AuthNav from './AuthNav/AuthNav';
 
-import logo from '../../images/logo.png';
+import logo from '../../images/Logo.png';
 import css from './Layout.module.css';
 
 function Layout() {
