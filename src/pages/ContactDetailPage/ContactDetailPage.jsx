@@ -134,10 +134,8 @@ function ContactDetailPage() {
                 className={`${css.btn} ${css.btn_back}`}
                 type="button"
                 onClick={handleButtonEditClick}
-                width="25"
-                height="25"
               >
-                <IoCaretBackCircleSharp />
+                <IoCaretBackCircleSharp className={css.linkIcon} />
               </Link>
             </>
           )}

@@ -9,7 +9,7 @@ function ThemeSwitcher() {
   const dispatch = useDispatch();
 
   const switchTheme = () => {
-    console.log(theme);
+    // console.log(theme);
     theme === 'light'
       ? dispatch(setTheme('dark'))
       : dispatch(setTheme('light'));

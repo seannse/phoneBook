@@ -64,6 +64,11 @@
   color: #ffffff;
 
   transition: 200ms ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  min-width: 53px;
 }
 
 .btn_back {
@@ -93,4 +98,9 @@
 .icons {
   width: 48px;
   height: 48px;
+}
+
+.linkIcon {
+  width: 24px;
+  height: 24px;
 }

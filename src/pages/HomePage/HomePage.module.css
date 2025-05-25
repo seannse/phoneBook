@@ -6,24 +6,13 @@
   background-image: url(../../images/start.png);
   background-repeat: no-repeat;
   background-size: contain;
+  align-self: center;
 
-  position: absolute;
-  top: -10%;
-  right: 0;
-  width: 400px;
-  height: 400px;
-
-  z-index: -1;
-}
-
-@media screen and (max-width: 768px) {
-  .bg_home {
-    display: none;
-  }
+  width: 300px;
+  height: 300px;
 }
 
 .title {
-  max-width: 484px;
   align-self: flex-start;
   margin-bottom: 20px;
 
@@ -36,8 +25,6 @@
 }
 
 .text {
-  max-width: 484px;
-
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
