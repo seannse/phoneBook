@@ -1,30 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import { Modal } from '../../components';
-import { removeContact } from '../../redux/contacts/operations';
 import { getRandomColor } from '../../services/getRandomColor';
-import { setIsModalDeleteContactOpen } from '../../redux/global/slice';
-import { selectIsModalDeleteContactOpen } from '../../redux/selectors';
-
 import css from './Contacts.module.css';
 
-const ContactItem = ({ id, name, number, idx }) => {
-  const dispatch = useDispatch();
+const ContactItem = ({ id, name, number, idx, onBtnClick }) => {
   const location = useLocation();
-  const isModalDeleteContactOpen = useSelector(selectIsModalDeleteContactOpen);
-
-  const handleButtonDeleteClick = id => {
-    dispatch(removeContact(id));
-    dispatch(setIsModalDeleteContactOpen());
-  };
-
-  const onBtnClick = () => {
-    console.log('click delete');
-    dispatch(setIsModalDeleteContactOpen());
-  };
 
   const [firstName, secondName] = name.split(' ');
 
@@ -52,29 +35,16 @@ const ContactItem = ({ id, name, number, idx }) => {
             {number}
           </p>
         </Link>
-        <button className={css.btn_delete} type="button" onClick={onBtnClick}>
+        <button
+          className={css.btn_delete}
+          type="button"
+          onClick={() => {
+            onBtnClick(id, name);
+          }}
+        >
           <AiOutlineDelete className={css.icon} />
         </button>
       </div>
-      {isModalDeleteContactOpen && (
-        <Modal
-          title={`Are you sure you want to delete ${name}?`}
-          setModalOpen={setIsModalDeleteContactOpen}
-          isModalOpen={isModalDeleteContactOpen}
-        >
-          <button
-            type="button"
-            onClick={() => {
-              handleButtonDeleteClick(id);
-            }}
-          >
-            Delete
-          </button>
-          <button type="button" onClick={onBtnClick}>
-            Cancel
-          </button>
-        </Modal>
-      )}
     </motion.li>
   );
 };

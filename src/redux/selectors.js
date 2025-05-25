@@ -11,7 +11,10 @@ export const selectIsModalDeleteContactOpen = state =>
 
 /*** filter ***/
 export const selectFilter = state => {
-  return state.filter;
+  return state.filter.filter;
+};
+export const selectAlphabetFilter = state => {
+  return state.filter.alphabetFilter;
 };
 
 /*** auth ***/
@@ -30,8 +33,14 @@ export const selectContactDetail = state => {
   return state.contacts.contactDetail;
 };
 export const selectFilteredContacts = createSelector(
-  [selectContacts, selectFilter],
-  (contacts, filterValue) => {
+  [selectContacts, selectFilter, selectAlphabetFilter],
+  (contacts, filterValue, alphaValue) => {
+    if (alphaValue) {
+      return contacts.filter(contact => {
+        return contact.name.toLowerCase().startsWith(alphaValue.toLowerCase());
+      });
+    }
+
     return contacts.filter(contact => {
       return contact.name
         .toLowerCase()

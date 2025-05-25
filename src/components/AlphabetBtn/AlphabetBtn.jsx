@@ -2,13 +2,13 @@ import style from './AlphabetBtn.module.css';
 
 //* Redux
 import { useDispatch } from 'react-redux';
-import { setFilter } from '../../redux/filter/slice';
+import { setAlphabetFilter } from '../../redux/filter/slice';
 
 const AlphabetBtn = ({ children }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(setFilter(children));
+    dispatch(setAlphabetFilter(children));
   };
 
   return (

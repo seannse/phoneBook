@@ -1,7 +1,7 @@
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 
-import { setFilter } from '../../redux/filter/slice';
+import { setAlphabetFilter } from '../../redux/filter/slice';
 import { AlphabetBtn } from '../../components';
 
 import style from './AlphabetFilter.module.css';
@@ -11,7 +11,7 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const AlphabetFilter = () => {
   const dispatch = useDispatch();
   const handleResetClick = () => {
-    dispatch(setFilter(''));
+    dispatch(setAlphabetFilter(''));
   };
 
   return (
